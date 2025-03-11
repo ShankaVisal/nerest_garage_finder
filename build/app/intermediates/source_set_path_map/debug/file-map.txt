@@ -21,12 +21,12 @@ com.example.nerest_garage_finder.app-jetified-play-services-basement-18.3.0-19 C
 com.example.nerest_garage_finder.app-jetified-annotation-experimental-1.4.0-20 C:\Users\shank\.gradle\caches\transforms-3\c4537ab9015740d05f09a422063523a5\transformed\jetified-annotation-experimental-1.4.0\res
 com.example.nerest_garage_finder.app-fragment-1.7.1-21 C:\Users\shank\.gradle\caches\transforms-3\ca4d40f38b71d4c621d36eba6fe2f4a4\transformed\fragment-1.7.1\res
 com.example.nerest_garage_finder.app-jetified-tracing-1.2.0-22 C:\Users\shank\.gradle\caches\transforms-3\e896b9ac412a8814559a776dc7b5a420\transformed\jetified-tracing-1.2.0\res
-com.example.nerest_garage_finder.app-debug-23 D:\Flutter Projects\nerest_garage_finder\android\app\src\debug\res
-com.example.nerest_garage_finder.app-main-24 D:\Flutter Projects\nerest_garage_finder\android\app\src\main\res
-com.example.nerest_garage_finder.app-pngs-25 D:\Flutter Projects\nerest_garage_finder\build\app\generated\res\pngs\debug
-com.example.nerest_garage_finder.app-resValues-26 D:\Flutter Projects\nerest_garage_finder\build\app\generated\res\resValues\debug
-com.example.nerest_garage_finder.app-packageDebugResources-27 D:\Flutter Projects\nerest_garage_finder\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.nerest_garage_finder.app-packageDebugResources-28 D:\Flutter Projects\nerest_garage_finder\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.nerest_garage_finder.app-merged_res-29 D:\Flutter Projects\nerest_garage_finder\build\app\intermediates\merged_res\debug
-com.example.nerest_garage_finder.app-packaged_res-30 D:\Flutter Projects\nerest_garage_finder\build\geolocator_android\intermediates\packaged_res\debug
-com.example.nerest_garage_finder.app-packaged_res-31 D:\Flutter Projects\nerest_garage_finder\build\url_launcher_android\intermediates\packaged_res\debug
+com.example.nerest_garage_finder.app-debug-23 E:\nerest_garage_finder\android\app\src\debug\res
+com.example.nerest_garage_finder.app-main-24 E:\nerest_garage_finder\android\app\src\main\res
+com.example.nerest_garage_finder.app-pngs-25 E:\nerest_garage_finder\build\app\generated\res\pngs\debug
+com.example.nerest_garage_finder.app-resValues-26 E:\nerest_garage_finder\build\app\generated\res\resValues\debug
+com.example.nerest_garage_finder.app-packageDebugResources-27 E:\nerest_garage_finder\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.nerest_garage_finder.app-packageDebugResources-28 E:\nerest_garage_finder\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.nerest_garage_finder.app-merged_res-29 E:\nerest_garage_finder\build\app\intermediates\merged_res\debug
+com.example.nerest_garage_finder.app-packaged_res-30 E:\nerest_garage_finder\build\geolocator_android\intermediates\packaged_res\debug
+com.example.nerest_garage_finder.app-packaged_res-31 E:\nerest_garage_finder\build\url_launcher_android\intermediates\packaged_res\debug

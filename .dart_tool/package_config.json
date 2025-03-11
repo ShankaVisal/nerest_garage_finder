@@ -14,6 +14,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "bloc",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/bloc-9.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -66,6 +72,12 @@
       "rootUri": "file:///C:/flutter_windows_3.27.1-stable/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "flutter_bloc",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bloc-9.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "flutter_lints",
@@ -182,6 +194,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
@@ -192,6 +210,12 @@
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
@@ -326,7 +350,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-03-05T18:29:25.312265Z",
+  "generated": "2025-03-06T19:44:40.588287Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/flutter_windows_3.27.1-stable/flutter",
