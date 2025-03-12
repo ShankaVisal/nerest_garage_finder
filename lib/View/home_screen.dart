@@ -16,57 +16,98 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    SearchGarageBloc().add(
-      InitialEvent()
-    );
+    searchGarageBloc.add(InitialEvent());
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SearchGarageBloc, SearchGarageState>(
-      bloc: searchGarageBloc,
-      builder: (context, state){
-        switch(state.runtimeType){
-          case InitialState:
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('Home Screen'),
-            ),
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: (){
-                      searchGarageBloc.add(
-                        NearestGarageSearchEvent()
-                      );
-                    }, 
-                    child: Text('Search Nearest Garage')
+        bloc: searchGarageBloc,
+        builder: (context, state) {
+          switch (state.runtimeType) {
+            case InitialState:
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text('Home Screen'),
+                ),
+                body: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            searchGarageBloc.add(NearestGarageSearchEvent());
+                          },
+                          child: Text('Search Nearest Garage')),
+                      ElevatedButton(
+                          onPressed: () {
+                            searchGarageBloc.add(CallToGarageEvent());
+                          },
+                          child: Text('Call to Garage'))
+                    ],
                   ),
-                  ElevatedButton(
-                    onPressed: (){
-                      searchGarageBloc.add(
-                        CallToGarageEvent()
-                      );
-                    }, 
-                    child: Text('Call to Garage')
-                  )
-                ],
-              ),
-            ),
-          );
-          default:
-            return Scaffold(
-              appBar: AppBar(
-                title: Text('Home Screen'),
-              ),
-              body: Center(
-                child: Text('Unknown state'),
-              ),
-            );
-        }
-      },
-      listener: (context, state){});
+                ),
+              );
+            case SearchInProgressState:
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text('Search in Progress'),
+                  actions: [
+                    IconButton(
+                        onPressed: () {
+                          searchGarageBloc.add(InitialEvent());
+                        },
+                        icon: Icon(Icons.close))
+                  ],
+                ),
+                body: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            case SearchResultState:
+              SearchResultState searchResultState = state as SearchResultState;
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text("Seach Result"),
+                  actions: [
+                    IconButton(
+                        onPressed: () {
+                          searchGarageBloc.add(InitialEvent());
+                        },
+                        icon: Icon(Icons.close))
+                  ],
+                ),
+                body: Center(
+                  child: Text(searchResultState.searchResult),
+                ),
+              );
+            case CallToGarageState:
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text("Call to Garage"),
+                  actions: [
+                    IconButton(
+                        onPressed: () {
+                          searchGarageBloc.add(InitialEvent());
+                        },
+                        icon: Icon(Icons.close))
+                  ],
+                ),
+                body: Center(
+                  child: Text("Call to Garage"),
+                ),
+              );
+            default:
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text('Home Screen'),
+                ),
+                body: Center(
+                  child: Text('Unknown state'),
+                ),
+              );
+          }
+        },
+        listener: (context, state) {});
   }
 }

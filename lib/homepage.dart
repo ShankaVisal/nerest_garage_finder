@@ -53,9 +53,6 @@ Future<Position> _determinePosition() async {
   print(garages);
   }
 
-
-
-
 double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
   const double R = 6371; // Earth radius in km
   double dLat = (lat2 - lat1) * pi / 180;

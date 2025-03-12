@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:global_configuration/global_configuration.dart';
+import 'package:nerest_garage_finder/View/home_screen.dart';
 import 'package:nerest_garage_finder/homepage.dart';
 
 void main() async{
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homepage(),
+      home: HomeScreen(),
     );
   }
 }

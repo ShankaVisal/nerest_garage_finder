@@ -1,0 +1,10 @@
+^E:\NEREST_GARAGE_FINDER\BUILD\WINDOWS\X64\CMAKEFILES\66717AAE7F040C96853F4C44F8B6A022\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/nerest_garage_finder/windows -BE:/nerest_garage_finder/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/nerest_garage_finder/build/windows/x64/nerest_garage_finder.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
