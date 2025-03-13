@@ -7,7 +7,10 @@ class InitialEvent extends SearchGarageEvent{}
 
 class NearestGarageSearchEvent extends SearchGarageEvent{}
 
-class CallToGarageEvent extends SearchGarageEvent{}
+class CallToGarageEvent extends SearchGarageEvent{
+  final String phoneNumber;
+  CallToGarageEvent(this.phoneNumber);
+}
 
 
 // part of 'search_garage_bloc.dart';

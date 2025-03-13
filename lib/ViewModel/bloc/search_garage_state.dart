@@ -10,7 +10,7 @@ abstract class SearchActionState extends SearchGarageState{}
 class InitialState extends SearchGarageState{}
 
 class SearchResultState extends SearchGarageState{
-  final String searchResult;
+  final List<Map<String, dynamic>> searchResult;
   SearchResultState(this.searchResult);
 }
 

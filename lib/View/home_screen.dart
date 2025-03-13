@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text('Search Nearest Garage')),
                       ElevatedButton(
                           onPressed: () {
-                            searchGarageBloc.add(CallToGarageEvent());
+                            searchGarageBloc.add(CallToGarageEvent("0771775703"));
                           },
                           child: Text('Call to Garage'))
                     ],
@@ -77,8 +77,51 @@ class _HomeScreenState extends State<HomeScreen> {
                         icon: Icon(Icons.close))
                   ],
                 ),
-                body: Center(
-                  child: Text(searchResultState.searchResult),
+                body: CustomScrollView(
+                  physics: BouncingScrollPhysics(),
+                  slivers: [
+                    SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                        (context, index) {
+                          return Card(
+                            color: Color(0xFF3471A1),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: ListTile(
+                                    title: Text(
+                                      searchResultState.searchResult[index]['garage']['name'],
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20
+                                          )),
+                                    subtitle: Text(
+                                      "Distance: ${searchResultState.searchResult[index]['distance']} km",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16
+                                        ),
+                                      ),
+                                  ),
+                                ),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      searchGarageBloc.add(CallToGarageEvent(searchResultState.searchResult[index]['garage']['phone']));
+                                    },
+                                    child: Text('Call'))
+                              ],
+                            ),
+                          );
+                        },
+                        childCount: searchResultState.searchResult.length,
+                      ),
+                    )
+                  ],
+
+                  // child: Center(
+                  //   child: Text(searchResultState.searchResult.toString()),
+                  // ),
                 ),
               );
             case CallToGarageState:
@@ -101,6 +144,13 @@ class _HomeScreenState extends State<HomeScreen> {
               return Scaffold(
                 appBar: AppBar(
                   title: Text('Home Screen'),
+                  actions: [
+                    IconButton(
+                        onPressed: () {
+                          searchGarageBloc.add(InitialEvent());
+                        },
+                        icon: Icon(Icons.close))
+                  ],
                 ),
                 body: Center(
                   child: Text('Unknown state'),
