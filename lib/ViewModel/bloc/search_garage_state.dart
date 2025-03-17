@@ -21,8 +21,6 @@ class SearchErrorState extends SearchGarageState{
   SearchErrorState(this.errorMessage);
 }
 
-class CallToGarageState extends SearchGarageState{}
-
 
 
 
