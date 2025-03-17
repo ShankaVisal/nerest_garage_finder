@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.nerest_garage_finder.app-mergeDebugResources-27:/values-lo/values-lo.xml",
+            "outputFile": "com.example.nerest_garage_finder.app-mergeDebugResources-29:/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "C:\\Users\\shank\\.gradle\\caches\\transforms-3\\7f6d20225ac1174a3efad96609161b97\\transformed\\browser-1.8.0\\res\\values-lo\\values-lo.xml",
