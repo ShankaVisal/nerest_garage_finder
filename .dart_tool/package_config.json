@@ -50,6 +50,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
@@ -84,6 +90,18 @@
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-5.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.27",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
+      "name": "flutter_polyline_points",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_polyline_points-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_test",
@@ -138,6 +156,48 @@
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/global_configuration-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "google_maps",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps-8.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter-2.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "google_maps_flutter_android",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_android-2.14.14",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
+      "name": "google_maps_flutter_ios",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.13.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "google_maps_flutter_web",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_web-0.5.11",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "http",
@@ -218,6 +278,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "sanitize_html",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/sanitize_html-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/flutter_windows_3.27.1-stable/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -246,6 +312,12 @@
       "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "stream_transform",
+      "rootUri": "file:///C:/Users/shank/AppData/Local/Pub/Cache/hosted/pub.dev/stream_transform-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "string_scanner",
@@ -350,7 +422,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-03-13T18:55:41.682394Z",
+  "generated": "2025-03-17T19:27:27.452874Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/flutter_windows_3.27.1-stable/flutter",

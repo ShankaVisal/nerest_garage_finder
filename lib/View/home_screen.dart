@@ -124,22 +124,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   // ),
                 ),
               );
-            case CallToGarageState:
-              return Scaffold(
-                appBar: AppBar(
-                  title: Text("Call to Garage"),
-                  actions: [
-                    IconButton(
-                        onPressed: () {
-                          searchGarageBloc.add(InitialEvent());
-                        },
-                        icon: Icon(Icons.close))
-                  ],
-                ),
-                body: Center(
-                  child: Text("Call to Garage"),
-                ),
-              );
             default:
               return Scaffold(
                 appBar: AppBar(

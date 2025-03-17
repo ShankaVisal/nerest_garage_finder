@@ -39,6 +39,8 @@ dependencies:
   global_configuration: ^2.0.0
   flutter_bloc: ^9.1.0
   url_launcher: ^6.3.1
+  google_maps_flutter: ^2.10.1
+  flutter_polyline_points: ^2.1.0
 
 dev_dependencies:
   flutter_test:
