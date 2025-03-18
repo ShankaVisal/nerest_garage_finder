@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:bloc/bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:global_configuration/global_configuration.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:meta/meta.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,6 +40,8 @@ FutureOr<void> _nearestGarageSearchEvent(
 
     // Get user location
     Position userLocation = await _determinePosition();
+    LatLng userLatLng = LatLng(userLocation.latitude, userLocation.longitude);
+    print(userLatLng);
 
     // Find garages within 5km radius
     List<Map<String, dynamic>> nearbyGarages = _findGaragesWithinRadius(userLocation, garages, 125.0);
@@ -73,7 +76,7 @@ FutureOr<void> _nearestGarageSearchEvent(
 
     emit(
       //SearchResultState("Nearest Garage: ${nearestGarage['name']}, ${nearestGarage['phone']} (${distance.toStringAsFixed(2)} km away)")
-      SearchResultState(finalNearbyGarages)
+      SearchResultState(finalNearbyGarages, userLatLng)
     );
   } catch (e) {
     emit(SearchErrorState("Error: ${e.toString()}"));
@@ -106,7 +109,7 @@ FutureOr<void> _nearestGarageSearchEvent(
       emit(SearchErrorState("Location permissions are permanently denied"));
       // throw Exception('Location permissions are permanently denied.');
     }
-
+    
     return await Geolocator.getCurrentPosition();
   }
 

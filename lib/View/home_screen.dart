@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:nerest_garage_finder/View/map_screen.dart';
 import 'package:nerest_garage_finder/ViewModel/bloc/search_garage_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -104,6 +106,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                   ),
+                                ),
+                                ElevatedButton(
+                                  onPressed: (){
+                                    LatLng garageLocation = LatLng(searchResultState.searchResult[index]['garage']['latitude'], searchResultState.searchResult[index]['garage']['longitude']); 
+                                    LatLng userLocation = state.userLocation;
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MapScreen(
+                                      garageLocation: garageLocation,
+                                      userLocation: userLocation,
+                                    )));
+                                  }, 
+                                  child: Text("map")
                                 ),
                                 ElevatedButton(
                                     onPressed: () {

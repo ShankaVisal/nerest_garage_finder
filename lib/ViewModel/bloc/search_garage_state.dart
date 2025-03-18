@@ -11,7 +11,8 @@ class InitialState extends SearchGarageState{}
 
 class SearchResultState extends SearchGarageState{
   final List<Map<String, dynamic>> searchResult;
-  SearchResultState(this.searchResult);
+  final LatLng userLocation;
+  SearchResultState(this.searchResult, this.userLocation);
 }
 
 class SearchInProgressState extends SearchGarageState{}
