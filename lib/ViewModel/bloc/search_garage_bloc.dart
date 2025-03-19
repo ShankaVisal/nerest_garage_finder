@@ -44,7 +44,7 @@ FutureOr<void> _nearestGarageSearchEvent(
     print(userLatLng);
 
     // Find garages within 5km radius
-    List<Map<String, dynamic>> nearbyGarages = _findGaragesWithinRadius(userLocation, garages, 125.0);
+    List<Map<String, dynamic>> nearbyGarages = _findGaragesWithinRadius(userLocation, garages, event.radius);
 
     if (nearbyGarages.isEmpty) {
       emit(SearchErrorState("No garages found within 5km of your location."));

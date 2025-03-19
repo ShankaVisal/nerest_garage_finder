@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       ElevatedButton(
                           onPressed: () {
-                            searchGarageBloc.add(NearestGarageSearchEvent());
+                            searchGarageBloc.add(NearestGarageSearchEvent(radius: 25));
                           },
                           child: Text('Search Nearest Garage')),
                       ElevatedButton(
