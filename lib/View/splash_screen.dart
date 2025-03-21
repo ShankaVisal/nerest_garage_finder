@@ -41,14 +41,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: double.infinity,
                 fit: BoxFit.fill,
               )),
-          Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
-                },
-                child: Text("Home Screen")),
-          ),
+          // Center(
+          //   child: ElevatedButton(
+          //       onPressed: () {
+          //         Navigator.of(context).push(
+          //             MaterialPageRoute(builder: (context) => HomeScreen()));
+          //       },
+          //       child: Text("Home Screen")),
+          // ),
         ],
       ),
     );
