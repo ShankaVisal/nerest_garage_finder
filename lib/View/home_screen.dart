@@ -246,69 +246,136 @@ class _HomeScreenState extends State<HomeScreen> {
                         icon: Icon(Icons.close))
                   ],
                 ),
-                body: CustomScrollView(
-                  physics: BouncingScrollPhysics(),
-                  slivers: [
-                    SliverList(
-                      delegate: SliverChildBuilderDelegate(
-                        (context, index) {
-                          return Card(
-                            color: Color(0xFF3471A1),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: ListTile(
-                                    title: Text(
-                                        searchResultState.searchResult[index]
-                                            ['garage']['name'],
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20)),
-                                    subtitle: Text(
-                                      "Distance: ${searchResultState.searchResult[index]['distance']} km",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 16),
-                                    ),
-                                  ),
-                                ),
-                                ElevatedButton(
-                                    onPressed: () {
-                                      LatLng garageLocation = LatLng(
-                                          searchResultState.searchResult[index]
-                                              ['garage']['latitude'],
-                                          searchResultState.searchResult[index]
-                                              ['garage']['longitude']);
-                                      LatLng userLocation = state.userLocation;
-                                      Navigator.of(context)
-                                          .push(MaterialPageRoute(
-                                              builder: (context) => MapScreen(
-                                                    garageLocation:
-                                                        garageLocation,
-                                                    userLocation: userLocation,
-                                                  )));
-                                    },
-                                    child: Text("map")),
-                                ElevatedButton(
-                                    onPressed: () {
-                                      searchGarageBloc.add(CallToGarageEvent(
-                                          searchResultState.searchResult[index]
-                                              ['garage']['phone']));
-                                    },
-                                    child: Text('Call'))
-                              ],
-                            ),
-                          );
-                        },
-                        childCount: searchResultState.searchResult.length,
-                      ),
-                    )
-                  ],
+body: CustomScrollView(
+  physics: BouncingScrollPhysics(),
+  slivers: [
+    SliverPadding(
+      padding: EdgeInsets.all(12),
+      sliver: SliverList(
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            final garageData = searchResultState.searchResult[index]['garage'];
+            final distance = searchResultState.searchResult[index]['distance'];
 
-                  // child: Center(
-                  //   child: Text(searchResultState.searchResult.toString()),
-                  // ),
+            return Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              color: Color(0xFF3471A1),
+              margin: EdgeInsets.only(bottom: 12),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Garage Name
+                    Text(
+                      garageData['name'],
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      ),
+                    ),
+                    SizedBox(height: 6),
+
+                    // Distance
+                    Text(
+                      "Distance: ${distance} km",
+                      style: TextStyle(color: Colors.white70, fontSize: 16),
+                    ),
+
+                    // Garage Type
+                    SizedBox(height: 6),
+                    Text(
+                      "Type: ${garageData['garageType']}",
+                      style: TextStyle(color: Colors.white70, fontSize: 16),
+                    ),
+
+                    // Address
+                    SizedBox(height: 6),
+                    Text(
+                      "Address: ${garageData['address']}",
+                      style: TextStyle(color: Colors.white70, fontSize: 16),
+                    ),
+
+                    // Services
+                    SizedBox(height: 8),
+                    Text(
+                      "Services:",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Wrap(
+                      spacing: 6,
+                      runSpacing: 6,
+                      children: List<Widget>.from(
+                        garageData['services'].map<Widget>((service) => Chip(
+                          label: Text(service, style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0))),
+                          backgroundColor: Colors.white24,
+                        )),
+                      ),
+                    ),
+
+                    // Action Buttons
+                    SizedBox(height: 12),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            LatLng garageLocation = LatLng(
+                              garageData['latitude'],
+                              garageData['longitude'],
+                            );
+                            LatLng userLocation = state.userLocation;
+
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => MapScreen(
+                                garageLocation: garageLocation,
+                                userLocation: userLocation,
+                              ),
+                            ));
+                          },
+                          icon: Icon(Icons.map),
+                          label: Text("Map"),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Color(0xFF3471A1),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            searchGarageBloc.add(
+                              CallToGarageEvent(garageData['phone']),
+                            );
+                          },
+                          icon: Icon(Icons.phone),
+                          label: Text("Call"),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Color(0xFF3471A1),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
+              ),
+            );
+          },
+          childCount: searchResultState.searchResult.length,
+        ),
+      ),
+    ),
+  ],
+),
+
               );
             default:
               return Scaffold(

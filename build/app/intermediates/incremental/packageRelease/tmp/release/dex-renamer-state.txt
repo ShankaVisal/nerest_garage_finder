@@ -1,0 +1,4 @@
+#Wed Apr 30 00:23:39 IST 2025
+base.0=E\:\\nerest_garage_finder\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
